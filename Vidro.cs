@@ -20,7 +20,7 @@ public class Vidro : MonoBehaviour
         AtualizarVidas();
 
         if (gameOverCanvas != null)
-            gameOverCanvas.SetActive(false); // começa desativado
+            gameOverCanvas.SetActive(false); // comeÃ§a desativado
     }
 
     public void PerderVida(int quantidade)
@@ -57,23 +57,19 @@ public class Vidro : MonoBehaviour
 
     void GameOver()
     {
-        Debug.Log("Game Over ativado! Mostrando Canvas...");
 
         if (gameOverCanvas != null)
         {
             gameOverCanvas.SetActive(true);
-            Time.timeScale = 0f; // pausa só depois de ativar
-        }
-        else
-        {
-            Debug.LogError(" gameOverCanvas não foi atribuído no Inspector!");
+            Time.timeScale = 0f; // pausa sÃ³ depois de ativar
         }
     }
 
-    // Chama esse método no botão Restart
+    // Chama esse mÃ©todo no botÃ£o Restart
     public void RestartLevel()
     {
         Time.timeScale = 1f; // volta ao normal
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
+
